@@ -5,15 +5,16 @@ var time = require('sample-time')
 var fps = new sample;
 var ms = new sample;
 var started = +new Date();
-console.log('running for 5s...')
+console.log('running for ~5s...')
 rAF(function r(){
-  time.begin(ms)
 
   // spend some time
+  time.begin(ms)
   var i = 1e5+(1e6*Math.random())|0;
   while(i){i--};
   time.end(ms)
 
+  // adds a frame
   time.hz(fps)
 
   // run for 3s
@@ -23,7 +24,6 @@ rAF(function r(){
     log('fps',fps)
     log('ms',ms)
   }
-
 })
 
 function log(name,a){
