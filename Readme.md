@@ -9,7 +9,11 @@
 
 ## API
 
-   
+### time.hz(sample)
+
+### time.begin(sample)
+
+### time.end(sample)
 
 ## License
 
